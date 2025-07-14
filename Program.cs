@@ -4,6 +4,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 //add services and repositories
 builder.Services.AddStudentApi();
+builder.Services.AddUserApi();
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -23,6 +24,7 @@ app.UseHttpsRedirection();
 
 //all api's endpoints
 app.MapStudentApiRoutes();
+app.MapUserApiRoutes();
 
 
 app.Run();
